@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册页面</title>
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<script type="text/javascript" src="js/header.js" ></script>
+		<script type="text/javascript" src="js/register.js" ></script>
+		<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+		<style type="text/css">
+			.header .center{
+				float: right;
+			}
+			.contant{
+				width: 100%;
+				height: 588px;
+				position: relative;
+				padding-top: 50px;
+				padding-bottom: 50px;
+				background-color: #F5F5F5;
+			}
+			.login_banner{
+				width: 100%;
+				height: 588px;
+				background-color: #f45f47;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				min-height: 480px;
+			}
+			.wraper{
+				height: 100%;
+				width: 990px;
+				margin: 0 auto;
+			}
+			.clear:after{
+				clear: both;
+				display: block;
+				content: "";
+			}
+			.clear{
+				zoom: 1;
+			}
+			.wraper img{
+				display: inline-block;
+				vertical-align: middle;
+				border: 0;
+				margin-top: 80px;
+			}
+			.register_form{
+				position: relative;
+				z-index: 2;
+				float: right;
+				width: 400px;
+				margin-top: 40px;
+				margin-bottom: 40px;
+				background-color: #fff;
+			}
+			.form_header{
+				overflow: hidden;
+				height: 28px;
+				padding-top: 22px;
+				padding-right: 30px;
+				padding-left: 30px;
+				font-family: "微软雅黑";
+			}
+			.bg_pic{
+				display: inline-block;
+				float: left;
+			}
+			.form_header h1{
+				font-size: 18px;
+				font-weight: 700;
+				color: #666;
+			}
+			.form_header p{
+				margin-top: -22px;
+				text-align: right;
+				font-size: 14px;
+			}
+			.form_group{
+				position: relative;
+				height: 36px;
+				border: 1px solid #bebebe;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				width: 340px;
+			}
+			.input_tip{
+				position: absolute;
+				top: 37px;
+				left: 0;
+				height: 20px;
+				font-size: 12px;
+			}
+			.error{
+				display: none;
+				line-height: 20px;
+				color: #FF3333;
+			}
+			.input_area{
+				width: 338px;
+				position: relative;
+				overflow: hidden;
+			}
+			.input_label{
+				float: left;
+				width: 68px;
+				height: 36px;
+				line-height: 36px;
+				padding-left: 10px;
+				font-size: 12px;
+			}
+			.form_text{
+				width: 206px;
+				float: right;
+				height: 20px;
+				padding: 8px 36px 8px 0;
+				border: 0;
+				outline: none;
+			}
+			.input_text{
+				width: 240px;
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 36px;
+				line-height: 36px;
+				text-align: left;
+				color: #dfdfdf;
+				cursor: pointer;
+				font-size: 15px;
+			}
+			.inner{
+				padding-left: 30px;
+				padding-right: 30px;
+			}
+			.form_change{
+				height: 20px;
+				margin-top: -20px;
+				text-align: right;
+				line-height: 20px;
+				font-size: 14px;
+				
+			}
+			.form_agreen{
+				position: relative;
+				height: 18px;
+				line-height: 18px;
+			}
+			.left{
+				float: left;
+				font-size: 14px;
+				display: inline
+			}
+			.check_box{
+				position: relative;
+				height: 16px;
+				padding-left: 2px;
+				line-height: 16px;
+			}
+			.left a{
+				color: #09c;
+				text-decoration: none;
+			}
+			.left a:hover{
+				text-decoration: underline;
+			}
+			.form_submit{
+				margin-top: 20px;
+				margin-bottom: 14px;
+			}
+			.submit_btn{
+				background: url(img/form-icon.png) no-repeat -412px -288px;
+				width: 100%;
+				height: 44px;
+				padding: 0;
+				border: none;
+				border-radius: 3px;
+				background-color: #009DE0;
+				cursor: pointer;
+			}
+			.form_footer{
+				position: relative;
+				height: 50px;
+				padding-left:36px;
+				color: #999;
+			}
+			.coagent{
+				padding-top: 10px;
+			}
+			.coagent dt{
+				display: inline-block;
+				vertical-align: bottom;
+				line-height: 24px;
+				font-size: 14px;
+			}
+			.coagent dd{
+				display: inline-block;
+				vertical-align: bottom;
+				line-height: 24px;
+				width: 24px;
+				height: 24px;
+				margin-left: 7px;
+				background: url(img/form-icon.png) no-repeat;
+				cursor: pointer;
+			}
+			.coagent .qq{
+				background-position: -22px -193px;
+			}
+			.coagent .weibo{
+				background-position: -51px -193px;
+			}
+			.coagent .ali{
+				background-position: -83px -193px;
+			}
+			.coagent .bank{
+				background-position: -114px -193px;
+			}
+			.by_weixin{
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 100px;
+				height: 50px;
+				margin-right: 1px;
+				margin-bottom: 1px;
+				float: right;
+				display: inline;
+			}
+			.wx_tip{
+				position: relative;
+				float: left;
+				width: 50px;
+				height: 50px;
+				color: #999;
+				font-size: 12px;
+				line-height: 20px;
+			}
+			.wx_entry{
+				position: relative;
+				float:left ;
+				width: 50px;
+				height: 50px;
+				background: url(img/form-icon.png) no-repeat -600px -8px;
+				cursor: pointer;
+			}
+			.form_error{
+				border-color: red!important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="topbar">
+			<div class="topbar_min clear">
+				<p class="topbar_left">您好，欢迎来到海豚村</p>
+					<div class="topbar_right">
+						<ul class="topbar_list clear">
+							<li><a href="enter.html">登录</a></li>
+							<li class="topbar_sep">|</li>
+							<li><a href="">注册</a></li>
+							<li class="topbar_sep">|</li>
+							<li class="moblie"><a href="">手机版<div class="top_appcode"></div></a>
+							</li>
+							<li class="topbar_sep">|</li>
+							<li><a href="">关注</a></li>
+							<li class="topbar_sep">|</li>
+							<li><a href="">在线客服</a></li>
+						</ul>
+					</div>
+			</div>
+		</div>
+	<div class="u_page">
+		<div class="header">
+			<div class="grid_all clear">
+				<div class="left"><a href="javascript:;" class="logo"></a></div>
+				<div class="center"><a href="javascript:;" class="svc_cmt"></a></div>
+			</div>	
+		</div>
+		<div class="contant">
+			<div class="login_banner">
+				<div class="wraper">
+					<a href="" class="bg_pic">
+						<img src="img/register1.jpg"/>
+					</a>
+				</div>
+			</div>
+			<div class="wraper">
+				<div class="register_form ">
+						<div class="form_header">
+							<h1>新用户注册</h1>
+							<p class="go_login">已有账号？<a href="enter.html">立即登录</a></p>
+						</div>
+						<div class="form_box">
+							<div class="inner">
+								<form id="phone_form">
+									<!--phonenumber-->
+									<div class="form_group ">
+										<div class="input_tip">
+											<span class="error wrong">
+												请输入手机号
+											</span>
+										</div>
+										<div class="input_area clear">
+											<span class="input_label">手 机 号 码</span>
+											<input id="cellphone" class="form_text J_phone_input" name="cellphone" type="text" maxlength="11" autocomplete="off"placeholder="请使用常用手机"/>
+											
+										</div>
+									</div>
+									<!--register by email-->
+									<div class="form_change">
+										或使用<a href="">邮箱注册</a>
+									</div>
+									<!--password-->
+									<div class="form_group ">
+										<div class="input_tip">
+											<span class="error Ppassword">
+												请设置密码
+											</span>
+										</div>
+										<div class="input_area clear">
+											<span class="input_label">请设置密码</span>
+											<input id="Password" class="form_text" name="cellphone" type="password" maxlength="11" autocomplete="off"
+											placeholder="6-16个数字、字母或符号区分大小写"/>
+										</div>
+									</div>
+									<!--repassword-->
+									<div class="form_group ">
+										<div class="input_tip">
+											<span class="error repeat">
+												请设置确认密码
+											</span>
+										</div>
+										<div class="input_area clear">
+											<span class="input_label">确 认 密 码</span>
+											<input id="Repassword" class="form_text" name="cellphone" type="password" maxlength="11" autocomplete="off" placeholder="请输入确认密码"/>
+											
+										</div>
+									</div>
+									<div class="form_agreen">
+										<span class="left">
+											<input id="pAgree" class="hidden" type="checkbox" name="agreen" value="1" checked/>
+											<label class="check_box" for="pAgree">
+												我已阅读并同意
+											</label>
+											<a href="">《海豚村服务条款》</a>
+										</span>
+									</div>
+									<div class="form_submit">
+										<button id="by_phone" type="button" class="submit_btn"></button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="form_footer">
+							<dl class="coagent">
+								<dt>快捷登录方式</dt>
+								<dd class="qq"></dd>
+								<dd class="weibo"></dd>
+								<dd class="ali"></dd>
+								<dd class="bank"></dd>
+							</dl>
+							<div class="by_weixin clear">
+								<div class="wx_tip">微信扫描直接登录</div>
+								<div class="wx_entry"></div>
+							</div>
+						</div>
+						<div class="ew_container"></div>
+					</div>
+			</div>
+		</div>
+	</div>
+	<div id="wrapper">
+		<div class="footer">
+			<div class="crdc">
+				<div class="copyright">
+					<span>COPYRIGHT&copy;2013-2016 ALL RIGHTS Reserved.粤ICP备13081207号</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
