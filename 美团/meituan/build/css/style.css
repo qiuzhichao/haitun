@@ -1,0 +1,554 @@
+html {
+  font-size: 50px;
+  min-height: 320px;
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100%;
+  font-family: "微软雅黑";
+  font-size: .28em;
+  line-height: 1;
+  color: #333;
+  background-color: #f0efed;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  display: flex;
+  height: 1.01rem;
+  background-color: #06c1ae;
+  border-bottom: 1px solid #21897d;
+  position: relative;
+  justify-content: space-between;
+}
+body a {
+  text-decoration: none;
+  color: white;
+}
+.nav-wrap-left {
+  height: 1.01rem;
+  line-height: 1.01rem;
+  flex: 1.5;
+}
+.nav-wrap-left .react {
+  display: block;
+  height: 100%;
+}
+.nav-wrap-left .react .nav-city {
+  line-height: 1;
+  font-size: .32rem;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin-right: .2rem;
+  margin-left: .2rem;
+}
+.nav-wrap-right {
+  flex: 1;
+  height: 100%;
+}
+.nav-wrap-right .react {
+  display: inline-block;
+  height: 100%;
+  line-height: 1rem;
+  text-align: center;
+  width: 0.94rem;
+  margin-right: 0.04rem;
+}
+.nav-wrap-right .react .nav-btn {
+  display: inline-block;
+  font-size: .2rem;
+  line-height: 1;
+  vertical-align: middle;
+}
+.nav-wrap-right .react .nav-btn .iconfont {
+  display: block;
+  margin: auto;
+  margin-bottom: .12rem;
+  font-size: .4rem;
+  font-style: normal;
+}
+.box-search {
+  flex: 6;
+  border-radius: .06rem;
+  background: rgba(0, 0, 0, 0.15);
+  height: .64rem;
+  line-height: .64rem;
+  position: relative;
+  margin-top: .2rem;
+}
+.box-search input {
+  display: inline-block;
+  width: 90%;
+  height: .50rem;
+  border-radius: 0.08rem ;
+  margin-left: .6rem;
+}
+.box-search .iconfont {
+  position: absolute;
+  display: inline-block;
+  font-size: .5rem;
+  font-style: normal;
+  height: .64rem;
+  line-height: .64rem;
+  vertical-align: middle;
+  margin-left: .05rem;
+}
+.banner img {
+  width: 6.4rem;
+  border: 0;
+  vertical-align: middle;
+}
+.swiper-container {
+  width: 100%;
+  height: 3.6rem;
+}
+.swiper-container .swiper-slide {
+  text-align: center;
+  background: #fff;
+  height: 3.6rem;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-container .swiper-slide .icon-list {
+  margin: 0;
+  padding: 0;
+  height: 3.6rem;
+  width: 100%;
+  list-style: none;
+  overflow: hidden;
+}
+.swiper-container .swiper-slide .icon-list .icon {
+  float: left;
+  box-sizing: border-box;
+  width: 20%;
+}
+.swiper-container .swiper-slide .icon-list .icon a {
+  display: block;
+  padding: .2rem 0;
+}
+.swiper-container .swiper-slide .icon-list .icon a .iconfont {
+  display: block;
+  margin: auto;
+  margin-bottom: .14rem;
+  width: .8rem;
+  height: .8rem;
+  border-radius: 1rem;
+  text-align: center;
+  line-height: .8rem;
+  font-size: .5rem;
+  color: #fff;
+}
+.swiper-container .swiper-slide .icon-list .icon a .icon-desc {
+  color: #333;
+}
+.list {
+  border-top: 1px solid #ddd8ce;
+  border-bottom: 1px solid #ddd8ce;
+  margin-top: .2rem;
+  margin-bottom: 0;
+  background-color: #fff ;
+}
+.list .list-padding {
+  padding: .12rem;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+}
+.list .list-padding .left {
+  flex: 1;
+}
+.list .list-padding .left .react {
+  display: block;
+  height: 2.96rem;
+  border-right: 1px solid #DDD8CE;
+  flex: 1;
+}
+.list .list-padding .left .react .info {
+  vertical-align: top;
+  width: 1.7rem;
+  text-align: left;
+  display: inline-block;
+}
+.list .list-padding .left .react .info strong {
+  display: block;
+  color: #55a40f;
+  font-size: .3rem;
+  margin-top: .3rem;
+  margin-bottom: .25rem;
+}
+.list .list-padding .left .react .info small {
+  color: #333;
+  font-size: smaller;
+}
+.list .list-padding .left .react .imgbox {
+  width: 1.76rem;
+  height: 1.76rem;
+  margin: auto;
+  display: block;
+}
+.list .list-padding .left .react .imgbox img {
+  vertical-align: middle;
+}
+.list .list-padding .right {
+  flex: 2;
+}
+.list .list-padding .right .top .react {
+  display: block;
+  border-bottom: 1px solid #DDD8CE;
+  height: 1.46rem;
+}
+.list .list-padding .right .top .react .info {
+  vertical-align: top;
+  width: 1.7rem;
+  text-align: left;
+  display: inline-block;
+}
+.list .list-padding .right .top .react .info strong {
+  display: block;
+  color: #ff3f0d;
+  margin-top: .3rem;
+  margin-bottom: .25rem;
+}
+.list .list-padding .right .top .react .info small {
+  color: #333;
+}
+.list .list-padding .right .top .react .imgbox {
+  width: 1.3rem;
+  height: 1.3rem;
+  display: inline-block;
+  margin: auto;
+}
+.list .list-padding .right .top .react .imgbox img {
+  height: 100%;
+  vertical-align: middle;
+  border: 0;
+}
+.list .list-padding .right .bottom {
+  display: flex;
+}
+.list .list-padding .right .bottom .react {
+  height: 1.48rem;
+  display: block;
+  flex: 1;
+}
+.list .list-padding .right .bottom .react .info {
+  vertical-align: top;
+  width: 1.7rem;
+  text-align: center;
+  display: block;
+  margin-left: .5rem;
+}
+.list .list-padding .right .bottom .react .info strong {
+  margin-bottom: .14rem;
+  color: #f742a0;
+  display: block;
+  font-size: .3rem;
+  margin-top: .12rem;
+}
+.list .list-padding .right .bottom .react .info small {
+  color: #333;
+}
+.list .list-padding .right .bottom .react .imgbox {
+  width: .8rem;
+  height: .8rem;
+  display: block;
+  margin-left: 1rem;
+}
+.list .list-padding .right .bottom .react .imgbox img {
+  height: 100%;
+}
+.list .list-padding .right .bottom .mangdian {
+  height: 1.48rem;
+  flex: 1;
+  border-left: 1px solid #DDD8CE;
+  text-align: center;
+  display: block;
+}
+.list .list-padding .right .bottom .mangdian .info {
+  vertical-align: top;
+  width: 1.7rem;
+  text-align: center;
+  display: block;
+}
+.list .list-padding .right .bottom .mangdian .info strong {
+  margin-bottom: .14rem;
+  color: #ff8601;
+  display: block;
+  font-size: .3rem;
+  margin-top: .12rem;
+}
+.list .list-padding .right .bottom .mangdian .info small {
+  color: #333;
+  display: block;
+  margin-bottom: .2rem;
+  margin-top: .2rem;
+}
+.list .list-padding .right .bottom .mangdian .info .time-panel {
+  margin-left: .3rem;
+}
+.list .list-padding .right .bottom .mangdian .info .time-panel .span-time {
+  display: inline-block;
+  background-color: #4c4c4c;
+  width: .4rem;
+  height: .3rem;
+  border-radius: .06rem;
+  text-align: center;
+  line-height: .3rem;
+  font-size: .24rem;
+  color: #FFFFFF;
+}
+.guss-like {
+  border-top: 1px solid #DDD8CE;
+  border-bottom: 1px solid #DDD8CE ;
+  margin-top: .2rem;
+  margin-bottom: 0;
+  background-color: #fff;
+  min-height: 5rem;
+  position: relative;
+}
+.guss-like .list {
+  border: 0;
+}
+.guss-like .list dd {
+  margin-left: .2rem;
+  border-bottom: 1px solid #DDD8CE;
+  overflow: hidden;
+  font-weight: 400;
+  position: relative;
+}
+.guss-like .list dd .react {
+  padding-left: 0;
+  padding: .28rem .2rem;
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+.guss-like .list dd .react .dealcard {
+  position: relative;
+  box-sizing: border-box;
+  margin: -0.08rem 0;
+}
+.guss-like .list dd .react .dealcard .imgbox {
+  position: absolute;
+  width: 1.8rem;
+  height: 1.64rem;
+  text-align: center;
+  overflow: hidden;
+}
+.guss-like .list dd .react .dealcard .imgbox img {
+  width: 100%;
+  border: 0;
+}
+.guss-like .list dd .react .dealcard .dealcard-block-right {
+  margin-left: 2rem;
+  height: 1.64rem;
+  position: relative;
+}
+.guss-like .list dd .react .dealcard .dealcard-block-right .title {
+  font-size: .24rem;
+  height: .68rem;
+  margin-bottom: .16rem;
+  color: #333;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.guss-like .list dd .react .dealcard .dealcard-block-right .price {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  color: #333;
+}
+.guss-like .list dd .react .dealcard .dealcard-block-right .price span {
+  vertical-align: sub;
+}
+.guss-like .list dd .react .dealcard .dealcard-block-right .price .strong {
+  font-size: .38rem;
+  color: #06c1ae;
+}
+.guss-like .list dd .react .dealcard .dealcard-block-right .price .strong-color {
+  font-size: .26rem;
+  color: #06c1ae;
+}
+.guss-like .list dd .react .dealcard .dealcard-block-right .price .tag {
+  border: .02rem solid #f90;
+  color: #f90;
+  line-height: 1.5;
+  display: inline-block;
+  padding: 0 .06rem;
+  font-size: .22rem;
+  border-radius: .06rem;
+}
+.guss-like .list dd .react .dealcard .dealcard-block-right .price .line-right {
+  position: absolute;
+  top: .04rem;
+  right: 0;
+  font-size: .24rem;
+}
+.guss-like .list dt {
+  font-size: .34rem;
+  padding: .28rem .2rem;
+  color: #333;
+  border-bottom: 1px solid #DDD8CE ;
+  font-weight: 400;
+}
+.guss-like .ab {
+  border-bottom: 0;
+  height: .8rem;
+  font-size: .3rem;
+  display: none;
+}
+.guss-like .ab .react {
+  color: #06C1AE;
+  padding: 0 .2rem;
+  display: none;
+  height: 100%;
+  text-decoration: none;
+}
+.guss-like .ab .react .more {
+  position: relative;
+  padding-right: .3rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.guss-like .ab .react .more i {
+  position: absolute;
+  right: .1rem;
+  font-style: normal;
+  font-size: .3rem;
+  vertical-align: top;
+}
+.loading {
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  display: none;
+}
+footer {
+  margin-top: .3rem;
+  padding: 0 .2rem .4rem;
+  background-color: #f0efed;
+}
+footer .footer-bar {
+  font-size: .28rem;
+  margin-bottom: .4rem;
+}
+footer .footer-bar .btn {
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+  height: .6rem;
+  border-radius: .06rem;
+  font-size: .28rem;
+  vertical-align: middle;
+  line-height: .6rem;
+  box-sizing: border-box;
+}
+footer .footer-bar .btn-weak {
+  border: .02rem solid #06C1AE;
+  padding: 0 .3rem;
+  background: 0;
+  color: #06C1AE;
+}
+footer .footer-bar .pull-right {
+  float: right;
+}
+footer .footer-bar .pull-right .footer-citybtn {
+  width: 1.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis ;
+  white-space: nowrap;
+}
+footer .footer-nav {
+  margin-bottom: .18rem;
+}
+footer .footer-nav ul {
+  margin: 0;
+  padding: .18rem 0;
+  font-size: .24rem;
+  white-space: nowrap;
+  display: flex;
+  list-style: none;
+}
+footer .footer-nav ul li {
+  flex: 1;
+  border-right: .02rem solid #666;
+  text-align: center;
+}
+footer .footer-nav ul li a {
+  color: #06C1AE;
+  display: block;
+  height: 100%;
+  text-decoration: none ;
+}
+footer .footer-links {
+  font-size: .24rem;
+  margin: .3rem .2rem;
+  text-align: center;
+}
+footer .footer-links a {
+  color: #06C1AE;
+  text-decoration: none ;
+}
+footer .footer-copyright {
+  color: #999;
+  font-size: .22rem;
+  text-align: center;
+  position: relative;
+}
+footer .footer-copyright .hr {
+  display: block;
+  content: "";
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  border-top: 1px solid #999;
+}
+footer .footer-copyright .footer-copyright-text {
+  position: relative;
+  padding: 0 .3rem;
+  background-color: #F0EFED;
+}
+footer .footer-copyright .footer-copyright-text a {
+  text-decoration: none;
+  color: #999;
+}
+.top-btn {
+  display: none;
+  position: fixed;
+  right: .3rem;
+  bottom: 1.5rem;
+  width: .86rem;
+  height: .86rem;
+  line-height: .86rem;
+  background: #06C1AE;
+  z-index: 100;
+  border-radius: 50%;
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+.top-btn .react {
+  display: block;
+  height: 100%;
+}
+.top-btn .react img {
+  display: block;
+  width: 100%;
+}
